@@ -2,7 +2,7 @@
 
 CURL_VERSION=8.0.1
 LIBRESSL_VERSION=3.3.6
-
+absPath=$(pwd)
 # 系统检测
 if grep -q "Alpine" /etc/os-release; then
     SYSTEM="alpine"
@@ -50,7 +50,7 @@ elif [ "$SYSTEM" = "debian" ]; then
 fi
 
 # 编译 LibreSSL - 确保启用 TLS-SRP
-cd /root && \
+cd $absPath && \
     tar -xzf libressl-$LIBRESSL_VERSION.tar.gz && \
     cd libressl-$LIBRESSL_VERSION && \
     chmod +x configure config.* && \
@@ -62,7 +62,7 @@ cd /root && \
 
     make -j$(nproc) && \
     make install && \
-    rm -rf ../libressl-*
+
 
 # 验证 LibreSSL 的 TLS-SRP 支持
 echo "验证 LibreSSL 的 TLS-SRP 支持:"
@@ -70,7 +70,7 @@ echo "验证 LibreSSL 的 TLS-SRP 支持:"
 echo ""
 
 # 编译 curl
-cd /root && \
+cd $absPath && \
     tar -xzf curl-$CURL_VERSION.tar.gz && \
     cd curl-$CURL_VERSION && \
     chmod +x configure config.* && \
@@ -105,7 +105,7 @@ cd /root && \
 
     make -j$(nproc) && \
     make install && \
-    rm -rf ../curl-*
+
 
 # 验证所有支持的特性
 echo "最终支持的特性列表："
