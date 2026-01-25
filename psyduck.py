@@ -42,7 +42,7 @@ QINGLONG_ClientSecret={client_secret}         # 青龙ClientSecret
 { "" if  ql_url else ";"}QINGLONG_BaseUrl={ql_url}               # 青龙Url,一般bridge模式无需设置,host模式可能需要
 index= true                       # true:账户下标从1开始计数 false:下标从0开始计数
 { "" if  delayTo else ";"}delayTo={delayTo}                        # 脚本生成的定时任务设置在几点后
-;autoRelay=false                  # true:所有脚本都开启流量转发
+autoRelay=true                  # true:所有脚本都开启流量转发
 ;jdRelay=3                        # 单条转发线路最多运行多少账户
 ;syncRelay=20                     # 每20秒同步转发线路的用户使用情况,方便新开脚本清理转发缓存
 

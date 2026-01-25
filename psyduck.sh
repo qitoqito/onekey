@@ -57,3 +57,5 @@ if [ ! -f "$libressl" ]; then
 else
     echo "任务已完成"
 fi
+
+echo "当前网络需要开启ipv6,需要添加relayApi才能愉快运行,项目地址: https://github.com/xoyoxoyo/relayApi"
