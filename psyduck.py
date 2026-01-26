@@ -100,7 +100,7 @@ def subscriptions():
     client_id = os.getenv('CLIENT_ID')
     client_secret = os.getenv('CLIENT_SECRET')
     ql_port=os.getenv("QINGLONG_PORT")
-    ql_url=f"http://127.0.0.1:{ql_port}" if ql_port else ''
+    ql_url=f"http://127.0.0.1:{ql_port}" if ql_port else 'http://127.0.0.1:5700'
     print("正在获取Token...")
     token_response = requests.get(
         f"{ql_url}/open/auth/token",
