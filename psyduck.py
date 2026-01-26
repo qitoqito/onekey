@@ -15,7 +15,7 @@ def main():
     client_secret = os.getenv('CLIENT_SECRET')
     ql_port=os.getenv("QINGLONG_PORT")
     ql_url=f"http://127.0.0.1:{ql_port}" if ql_port else ''
-    iniPath=input("请输入iniPath路径(默认在脚本库config文件夹): ").strip() or '/ql/data/scripts/qitoqito_psyduck'
+    iniPath=input("请输入iniPath路径(默认在脚本库config文件夹): ").strip()
     jdSign=input("请输入jdSign路径: ")
     validCookie=input("是否开启cookie过期缓存(1:开启, 0:关闭): ").strip()
     delayTo=input("请输入0到23任一数字(生成的定时任务都设置在几点后): ")
