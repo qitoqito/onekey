@@ -129,12 +129,6 @@ fi
 echo "✅ 安装成功！库文件位于: $INSTALL_DIR"
 ls -l "$INSTALL_DIR"/libcurl-impersonate.so*
 
-# ---------- 输出环境变量 ----------
-echo "--------------------------------------------------"
-echo "请执行以下命令设置环境变量："
-echo "export LIBCURL_PATH=${INSTALL_DIR}/libcurl-impersonate.so"
-echo "--------------------------------------------------"
-
 export LIBCURL_PATH=/ql/data/scripts/qitoqito_psyduck/static/libcurl-impersonate/libcurl-impersonate.so
 cd /ql/data/scripts/qitoqito_psyduck
 # ---------- 创建 package.json（如果不存在） ----------

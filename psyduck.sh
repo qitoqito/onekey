@@ -1,17 +1,4 @@
 #!/usr/bin/env bash
-echo "安装libressl中..."
-
-libressl="/opt/psyduck/curl/bin/psyduck-curl"
-
-# 检查目标文件是否存在
-if [ ! -f "$libressl" ]; then
-    chmod +x libressl.sh
-    echo "未找到 $libressl，正在执行 libressl.sh..."
-    # 执行 libressl.sh
-    ./libressl.sh
-else
-    echo "已存在 $libressl，跳过执行。"
-fi
 
 echo "正在安装requests"
 pip3 install requests
@@ -58,4 +45,4 @@ else
     echo "任务已完成"
 fi
 
-echo "当前网络需要开启ipv6,需要添加relayApi才能愉快运行,项目地址: https://github.com/xoyoxoyo/relayApi"
+echo "当前网络需要开启ipv6,需要添加relayPool才能愉快运行,项目地址: https://github.com/parseurl/relayPool"
